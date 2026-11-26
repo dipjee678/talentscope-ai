@@ -1,0 +1,7 @@
+-r requirements.txt
+asyncpg>=0.30.0
+psycopg[binary]>=3.2.0
+pgvector>=0.3.6
+pytesseract>=0.3.13
+Pillow>=11.0.0
+pymupdf>=1.25.0

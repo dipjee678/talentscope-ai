@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --muted: 214 32% 94%;
+    --muted-foreground: 215 16% 42%;
+    --border: 214 28% 88%;
+    --primary: 224 76% 48%;
+    --primary-foreground: 210 40% 98%;
+    --accent: 215 28% 93%;
+    --accent-foreground: 222 47% 11%;
+  }
+
+  .dark {
+    --background: 224 36% 7%;
+    --foreground: 213 31% 94%;
+    --card: 224 32% 10%;
+    --card-foreground: 213 31% 94%;
+    --muted: 223 26% 15%;
+    --muted-foreground: 215 20% 65%;
+    --border: 223 24% 18%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    --accent: 223 26% 16%;
+    --accent-foreground: 213 31% 94%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20;
+  }
+}
+
+/* Subtle SaaS scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 9999px;
+}
