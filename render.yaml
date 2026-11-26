@@ -83,6 +83,7 @@ services:
       # Public URL of the backend service above. Service names are global on onrender.com, so
       # Render usually appends a suffix (e.g. talentscope-api-x1y2.onrender.com). After the first
       # deploy, copy the real URL from the talentscope-api page, set it here in the Render
-      # dashboard (talentscope-web -> Environment) and redeploy. The default below is a placeholder.
+      # dashboard (talentscope-web -> Environment) and redeploy. `sync: false` keeps Blueprint
+      # syncs from overwriting the value you set there.
       - key: BACKEND_URL
-        value: https://talentscope-api.onrender.com
+        sync: false
