@@ -79,9 +79,10 @@ the FastAPI backend (Docker, with Tesseract OCR) and the Next.js frontend.
 1. Push this folder to a GitHub repository.
 2. In the Render dashboard choose **New → Blueprint**, pick the repository and click **Apply**.
    Secrets (`JWT_SECRET_KEY`, `FILE_ENCRYPTION_KEY`) are generated automatically.
-3. When the services are live, open the `talentscope-api` service and check its URL. If it is not
-   exactly `https://talentscope-api.onrender.com`, set `BACKEND_URL` on `talentscope-web` to that URL
-   (Render then rebuilds the frontend).
+3. When the services are live, open the `talentscope-api` service and copy its URL. Render names are
+   global, so it usually has a suffix (e.g. `https://talentscope-api-x1y2.onrender.com`). Set
+   `BACKEND_URL` on `talentscope-web` → **Environment** to that URL (no trailing slash) and choose
+   **Save, rebuild, and deploy**. Until you do, sign-up and login will fail.
 4. Open the `talentscope-web` URL and create an account.
 
 How it fits the free tier: the browser only talks to the frontend, which proxies `/api/v1/*` to the

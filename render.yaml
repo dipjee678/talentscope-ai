@@ -80,7 +80,9 @@ services:
         value: "22"
       - key: NEXT_TELEMETRY_DISABLED
         value: "1"
-      # Public URL of the backend service above. If Render gave your API a different
-      # hostname (e.g. talentscope-api-x1y2.onrender.com), update this and redeploy.
+      # Public URL of the backend service above. Service names are global on onrender.com, so
+      # Render usually appends a suffix (e.g. talentscope-api-x1y2.onrender.com). After the first
+      # deploy, copy the real URL from the talentscope-api page, set it here in the Render
+      # dashboard (talentscope-web -> Environment) and redeploy. The default below is a placeholder.
       - key: BACKEND_URL
         value: https://talentscope-api.onrender.com
